@@ -1,0 +1,31 @@
+.button {
+    background: $color--white;
+    border-radius: $br--24;
+    font:$btn--text;
+    text-transform: uppercase;
+    padding: 0 28px;
+    height: 49px;
+    letter-spacing: 0.06em;
+    color: $color--eerieblack;
+}
+.pageLink {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $color--white;
+    font:600 12px/12px $main--font;
+    text-transform: uppercase;
+    span {
+        font-size: 23px;
+        margin-left: 13px;
+    }
+}
+
+@media(max-width:1200px) {
+    .button {
+        height: 31px;
+        padding: 0 16px;
+        font-size: 12px;
+        line-height: 31px;
+    }
+}

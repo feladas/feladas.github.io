@@ -1,0 +1,100 @@
+.header {
+    position: fixed;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+    transition: $tr-06;
+    padding-top: 36px;
+    &.loaded {
+        top: 0;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__right {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .button {
+            margin-right: 36px;
+        }
+    }
+    &__lang {
+        margin-right: 40px;
+        ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+       &__current {
+        position: relative;
+        padding-right: 18px;
+        span {
+            font-size: 9px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            &:before {
+                color: $color--grey;
+            }
+        }
+       }
+       a {
+        font:600 16px/19px $main--font;
+       }
+    }
+    .logo {
+        width: 192px;
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin-right: 36px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                text-transform: uppercase;
+                font: 600 14px/17px $main--font;
+            }
+        }
+    }
+    .mainSearch {
+        span {
+            font-size: 19px;
+            cursor: pointer;
+        }
+    }
+    @media(max-width:1200px) {
+        padding: 24px 0;
+        background: linear-gradient(180deg, #000000 17.19%, rgba(0, 0, 0, 0) 100%);
+        .logo {
+            width: 124px;
+        }
+        .menu {
+            display: none;
+        }
+        .mainSearch {
+            display: none;
+        }
+        &__right {
+            .button {
+                margin-right: 0;
+            }
+        }
+        &__lang {
+            display: none;
+        }
+    }
+}
